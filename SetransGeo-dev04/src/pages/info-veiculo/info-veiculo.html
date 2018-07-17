@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button navPop ion-button icon-only>
+        <ion-icon color="light" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Informações do Veículo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-grid>
+      <ion-row *ngFor="let veiculo of veiculos">
+        <ion-col col-10>
+          <ion-item>
+            {{veiculo.Numero}} - {{veiculo.Placa}} - {{veiculo.Descricao}} - {{veiculo.Empresa}} 
+           -{{veiculo.Codigo}} - {{veiculo.Ativo}} 
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+</ion-content>

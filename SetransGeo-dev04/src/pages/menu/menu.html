@@ -1,0 +1,60 @@
+<ion-menu side="left" id="authenticated" [content]="content">
+    <ion-header>
+      <ion-toolbar class="user-profile" no-padding>
+  
+        <ion-list no-margin>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="../assets/imgs/avatar.jpeg">
+            </ion-avatar>
+            <h2 class="bold">Nome do Usuário</h2>
+          <div padding-top>
+            <button ion-button small color="secondary">
+              <ion-icon name="contact"></ion-icon>
+              Editar
+            </button>
+            <button ion-button icon-left small color="secondary" menuClose tappable (click)="sair()">
+              <ion-icon name="log-out"></ion-icon>
+              Sair
+            </button>
+          </div>
+          </ion-item>
+        </ion-list>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content color="primary">
+  
+      <ion-list class="user-list">
+        <button ion-item class="text-1x" menuClose ion-item (click)="allOnibus()">
+            <ion-icon name="bowtie" color="primary"></ion-icon>
+            <span ion-text color="primary">Tela Inicial</span>
+        </button>
+
+        <button ion-item class="text-1x" menuClose ion-item (click)="empresa()">
+            <ion-icon name="chatbubbles" color="primary"></ion-icon>
+            <span ion-text color="primary">Empresas</span>
+        </button>
+
+        <button ion-item class="text-1x" menuClose ion-item (click)="linha()">
+            <ion-icon name="map" color="primary"></ion-icon>
+            <span ion-text color="primary">Linhas</span>
+        </button>
+
+        <button ion-item class="text-1x" menuClose ion-item (click)="veiculo()">
+          <ion-icon name="briefcase" color="primary"></ion-icon>
+          <span ion-text color="primary">Veículos</span>
+        </button>
+
+        <button ion-item class="text-1x" menuClose ion-item (click)="linha()">
+          <ion-icon name="medal" color="primary"></ion-icon>
+          <span ion-text color="primary">Configurações</span>
+        </button>
+
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+
+<ion-nav [root]="homePage" #content></ion-nav>
+<!-- <ion-nav [root]="homePage" #content swipeBackEnabled="false"></ion-nav> -->

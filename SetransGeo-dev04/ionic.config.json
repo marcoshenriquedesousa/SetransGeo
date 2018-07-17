@@ -1,0 +1,8 @@
+{
+  "name": "SetransGeo",
+  "app_id": "14a901af",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

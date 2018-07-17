@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button navPop ion-button icon-only>
+        <ion-icon color="light" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Editar Veículo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label floating>Empresa</ion-label>
+        <ion-input [(ngModel)]="empresa" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input [(ngModel)]="descricao" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Placa</ion-label>
+        <ion-input [(ngModel)]="placa" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Numero</ion-label>
+        <ion-input [(ngModel)]="numero" type="number"></ion-input>
+    </ion-item>
+
+    <div class="paddbut">
+        <button ion-button icon-start block color="primary" (click)="cadastrar()">
+          Alterar
+        </button>
+    </div>
+    
+</ion-content>

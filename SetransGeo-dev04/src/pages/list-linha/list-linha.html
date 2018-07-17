@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle color="primary">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <div ion-text class="icon-title"></div>
+        <strong>Linhas da Empresa</strong>
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-grid class="border-bottom detail-bg">
+          <ion-row>
+            <ion-col text-center>
+                <h3 ion-text color="primary" *ngFor="let linha of linhas">{{linha.Nome_Fantasia}}</h3>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      <ion-list no-lines>
+          <ion-grid>
+            <ion-row *ngFor="let linha of linhas">
+              <ion-col col-10>
+                <ion-item>{{linha.Descricao}}</ion-item>
+              </ion-col>
+              <ion-col col-2>
+                <button ion-button icon-only (click)="presentPopover($event, linha.Codigo)">
+                  <ion-icon name="more"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+    <ion-fab top right edge>
+      <button ion-fab (click)="cadastrolinha()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+  
+  </ion-content>
+  

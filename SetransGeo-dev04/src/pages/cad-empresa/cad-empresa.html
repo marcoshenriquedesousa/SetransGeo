@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+      <ion-buttons left>
+        <button navPop ion-button icon-only>
+          <ion-icon color="light" ></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Cadastrar Empresa</ion-title>
+    </ion-navbar>
+  </ion-header>
+    
+  
+  
+  <ion-content >
+      <ion-col col-6 col-md-4 class="no-paddingT no-paddingB">
+          <div class="guests bb">
+              <ion-item>
+                  <ion-label floating>Razão Social</ion-label>
+                  <ion-input type="text" [(ngModel)]="razao"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label floating>Nome Fantasia</ion-label>
+                  <ion-input type="text" [(ngModel)]="fantasia"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label floating>CNPJ</ion-label>
+                  <ion-input type="number" [(ngModel)]="cnpj"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label floating>Endereço</ion-label>
+                  <ion-input type="text" [(ngModel)]="endereco"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label floating>Telefone</ion-label>
+                  <ion-input type="tel" [(ngModel)]="telefone"></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                  <ion-label floating>Email</ion-label>
+                  <ion-input type="email" [(ngModel)]="email"></ion-input>
+              </ion-item>
+
+              <div class="paddbut">
+                  <button ion-button icon-start block color="primary" (click)="cadastrar()">
+                  CADASTRAR EMPRESA
+                  </button>
+              </div>
+          </div>
+        </ion-col>
+  </ion-content>

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle color="primary">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <div ion-text class="icon-title"></div>
+        <strong>Selecione a Empresa</strong>
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+    <ion-list no-lines>
+     
+        <ion-grid>
+          <ion-row *ngFor="let empresa of empresas">
+
+            <ion-col col-12>
+                <button ion-item (click)="pushPage(empresa.Codigo)">
+                  {{empresa.Nome_Fantasia}}
+                </button>
+            </ion-col>
+            
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+
+</ion-content>

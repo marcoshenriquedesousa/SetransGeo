@@ -1,0 +1,50 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle color="primary">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Cadastrar Veículos</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content  padding>
+
+    <form [formGroup]="formatoFormulario">
+        <ion-item>
+            <ion-label floating>Empresa</ion-label>
+            <ion-input [(ngModel)]="empresa" type="number" formControlName="empresa"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Descrição</ion-label>
+            <ion-input [(ngModel)]="descricao" type="text" formControlName="descricao"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Placa</ion-label>
+            <ion-input [(ngModel)]="placa" type="text" formControlName="placa"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Numero</ion-label>
+            <ion-input [(ngModel)]="numero" type="number" formControlName="numero"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Estado</ion-label>
+            <ion-select [(ngModel)]="ativo" formControlName="ativo">
+                <ion-option value=1>Ativado</ion-option>
+                <ion-option value=0>Desativado</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <div class="paddbut">
+            <button ion-button icon-start block color="primary" (click)="cadastrar(); $event.preventDefault()" [disabled]="formatoFormulario.invalid">
+                CADASTRAR VEÍCULOS
+            </button>
+        </div>
+    </form>
+
+</ion-content>
